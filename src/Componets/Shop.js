@@ -7,6 +7,7 @@ import axios from "axios";
 
 const Shop = ({}) => {
   const { data, error, isLoading } = useGetAllProductsQuery();
+  
   const dispetch = useDispatch();
   const navigate = useNavigate();
 
@@ -18,7 +19,7 @@ const Shop = ({}) => {
       .get("https://dummyjson.com/products")
       .then((response) => {
         console.log(setProducts);
-        setSearchlist(response.data);
+        setSerchProduct(response.data);
       })
       .catch((error) => {
         console.error();
