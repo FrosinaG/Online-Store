@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/cartSlice";
 import axios from "axios";
 
-const Shop = ({}) => {
+const Shop = () => {
   const { data, error, isLoading } = useGetAllProductsQuery();
 
   const dispetch = useDispatch();
@@ -18,13 +18,12 @@ const Shop = ({}) => {
     axios
       .get("https://dummyjson.com/products")
       .then((response) => {
-        console.log(setProducts);
         setSerchProduct(response.data);
       })
       .catch((error) => {
         console.error();
       });
-  }, []);
+  });
 
   const hendleAddTocart = (products) => {
     dispetch(addToCart(products));

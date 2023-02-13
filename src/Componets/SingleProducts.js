@@ -23,8 +23,7 @@ const SingleProducts = ({ article }) => {
     apiCall();
   }, [id]);
 
-  if (!product) return null;
-
+  // if (!product) return null;
   return (
     <div key={product.id} className="single-con">
       <div className="singlebox">
