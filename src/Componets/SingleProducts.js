@@ -8,7 +8,7 @@ const SingleProducts = ({ article }) => {
 
   const [product, SetProduct] = useState();
 
-  const apiCall = () => {
+  useEffect(() => {
     axios
       .get(`https://dummyjson.com/products/${id}`)
       .then((data) => {
@@ -18,12 +18,9 @@ const SingleProducts = ({ article }) => {
       .catch(() => {
         console.log("exception");
       });
-  };
-  useEffect(() => {
-    apiCall();
   }, [id]);
 
-  // if (!product) return null;
+  if (!product) return null;
   return (
     <div key={product.id} className="single-con">
       <div className="singlebox">
