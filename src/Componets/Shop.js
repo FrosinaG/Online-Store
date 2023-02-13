@@ -11,7 +11,7 @@ const Shop = ({}) => {
   const dispetch = useDispatch();
   const navigate = useNavigate();
 
-  const [products, setProducts] = useState();
+  const [setProducts] = useState();
   const [SearchProduct, setSerchProduct] = useState();
 
   useEffect(() => {
