@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 const SingleProducts = ({ article }) => {
   let { id } = useParams();
@@ -13,11 +13,10 @@ const SingleProducts = ({ article }) => {
       .get(`https://dummyjson.com/products/${id}`)
       .then((data) => {
         SetProduct(data.data);
-        console.log("locaton",location)
+        console.log("locaton", location);
       })
       .catch(() => {
         console.log("exception");
-      
       });
   };
   useEffect(() => {
@@ -107,6 +106,65 @@ const SingleProducts = ({ article }) => {
           </div>
         );
       })}
+      <div className="btnSingleProduct">
+        {" "}
+        <Link to={"/shop"}>
+          <button className="btn btn-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              className="bi bi-arrow-counterclockwise"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"
+              />
+              <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z" />
+            </svg>
+            Back
+          </button>
+        </Link>{" "}
+        <Link to={`/singelproduct/${parseInt(id) - 1}`}>
+          <button className="btn btn-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              className="bi bi-arrow-left"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+              />
+            </svg>
+            Preview
+          </button>{" "}
+        </Link>
+        <Link to={`/singelproduct/${parseInt(id) + 1}`}>
+          <button className="btn btn-primary">
+            {" "}
+            Next
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              className="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              />
+            </svg>
+          </button>{" "}
+        </Link>{" "}
+      </div>{" "}
     </div>
   );
 };

@@ -32,6 +32,11 @@ h2 {
 }
 
 /* SingleProductcomponent */
+.btnSingleProduct{
+display: flex;
+justify-content: space-between;
+margin: 10px;
+}
 .productsimg {
   max-height: 120px;
 }
