@@ -67,7 +67,7 @@ const Cart = () => {
                 <div className="allofCart" key={cartItems.id}>
                   <div className="cart-item">
                     <div className="cart-product">
-                      <div className="cart-thumbnail part">
+                      <div className="cart-thumbnail part1">
                         <p className="category">{cartItems.category}</p>
                         <img
                           src={cartItems.thumbnail}
@@ -75,7 +75,7 @@ const Cart = () => {
                           className="img-thum"
                         />
                       </div>
-                      <div className="text part">
+                      <div className="text part1">
                         <h3 className="h-cart">Product</h3>
 
                         <h2>{cartItems.title}</h2>
@@ -137,14 +137,14 @@ const Cart = () => {
                           {cartItems.rating}
                         </p>
                       </div>
-                      <div className="Cart-quantity part">
+                      <div className="Cart-quantity part1">
                         <h3 className="h-cart">Price</h3>
 
                         <div className="product-price ">
                           <p className="price1 price ">${cartItems.price}</p>
                         </div>
                       </div>
-                      <div className="Cart-quantity part">
+                      <div className="Cart-quantity part1">
                         <h3 className="h-cart">Quantity</h3>
                         <div className="buttonQ">
                           <button
@@ -165,7 +165,7 @@ const Cart = () => {
                         </div>
                       </div>
 
-                      <div className="cart-total-price part">
+                      <div className="cart-total-price part1">
                         <h3 className="h-cart">Total</h3>
                         <p className="totalprice price ">
                           ${cartItems.price * cartItems.cartQuantity}
@@ -221,7 +221,7 @@ const Cart = () => {
         </>
       )}
 
-      <button className=" btn btn-primary" onClick={logout}>
+      <button className=" btn btn-primary logout-btn" onClick={logout}>
         Log out
       </button>
     </div>

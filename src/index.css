@@ -1,0 +1,174 @@
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Homecomponent */
+  .home-cont,
+  .login-cont,
+  .contact-cont,
+  .single-con {
+    background-image: url(../src/Images/pexels-karolina-grabowska-4862892.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    margin: 0;
+  }
+  .header {
+    width: 100%;
+    margin: 0;
+    padding: 150px 35px;
+    display: block;
+    align-items: center;
+  }
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow: 0px 10px 10px rgb(0 0 0 / 50%);
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 0px 10px 10px rgb(0 0 0 / 50%);
+  }
+  /* Navcomponent */
+  .navmob {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .mob-ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .limob,
+  .logo {
+    padding: 3px 0;
+    font-size: 80px;
+    margin: 0;
+  }
+  .linknav {
+    font-size: 15px;
+  }
+  /* Footercomponent */
+  .footer-social-icon {
+    width: 40%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .social-icons-f {
+    align-items: center;
+  }
+  .copy {
+    margin: 0 auto;
+    align-items: center;
+    width: 35%;
+    font-size: 15px;
+    text-align: center;
+  }
+  /* Shopcomponet */
+  .allcard {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+  }
+  .cardbox {
+    width: 80%;
+    margin: 10px auto;
+  }
+  .Search {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .loading {
+    width: 100%;
+  }
+  /* SingleProductcomponent */
+  .singlebox {
+    display: block;
+    padding: 20px;
+  }
+  .part {
+    width: 80%;
+  }
+  .box {
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+  }
+  .photo {
+    width: 100%;
+  }
+  /* Contactcomponenet */
+  .contact-mob-text {
+    width: 80%;
+    padding: 20px;
+    font-size: 20px;
+    margin: 10px auto;
+  }
+  .contactform {
+    width: 80%;
+    padding: 10px;
+    margin: 0 auto;
+  }
+  .mb-3 {
+    width: 80%;
+    padding: 10px;
+    margin: 0 auto;
+  }
+  /* Logincomponent */
+  .loginform {
+    margin-top: 100px;
+    padding: 20px;
+  }
+  .login-cont {
+    width: 100%;
+    padding: 50px 0;
+    margin: 0;
+  }
+  .forma {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 5px;
+    align-items: center;
+  }
+  .mb-3 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  /* Cartcomponent */
+  .allofCart {
+    display: block;
+  }
+  .cart-item {
+    display: block;
+  }
+  .cart-product {
+    display: block;
+  }
+  .part1 {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .remove-btn {
+    width: 20%;
+    margin: auto;
+    padding: 20px 10px;
+  }
+  .logout-btn {
+    align-items: center;
+  }
+  .cart-empty {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .start-shopping {
+    width: 100%;
+    font-size: 18px;
+    margin: 20px auto;
+  }
+}

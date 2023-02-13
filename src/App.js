@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap";
 import "./App.css";
+import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
 import Nav from "./Componets/Nav";
 import Home from "./Componets/Home";
@@ -26,9 +27,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="*" element={<NotFound />}></Route>
-            <Route path="singelproduct/:id" element={<SingleProducts />} />
+          <Route path="singelproduct/:id" element={<SingleProducts />} />
           <Route element={<PrivareRoure />}>
-          <Route path="cart" element={<Cart />} /></Route>
+            <Route path="cart" element={<Cart />} />
+          </Route>
           <Route path="shop" element={<Shop />} />
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />
