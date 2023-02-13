@@ -3,9 +3,11 @@ import React from "react";
 export const Contact = () => {
   return (
     <div className="contact-cont">
-      <h1>CONTACT US</h1>
-      <h2>HAVE YOU SOME QUESTIONS ?</h2>
-      <h2 className="grey">How Can We Help You?</h2>
+      <div className="contact-mob-text">
+        <h1>CONTACT US</h1>
+        <h2>HAVE YOU SOME QUESTIONS ?</h2>
+        <h2 className="grey">How Can We Help You?</h2>
+      </div>
       <div className="contactform">
         <form
           action="https://formsubmit.co/frosina.gagovski@gmail.com"

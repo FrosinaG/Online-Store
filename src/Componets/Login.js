@@ -35,7 +35,7 @@ const Login = () => {
       <div className="loginfrom">
         <h1>Login</h1>
         <h2 className="grey">Welcome back! Please login to your account.</h2>
-        <form onSubmit={apiCall}>
+        <form onSubmit={apiCall} className="forma">
           <div className="mb-3">
             <label className="form-label label1">Email address</label>
             <p className="default-login">Default user :atuny0</p>
@@ -46,7 +46,6 @@ const Login = () => {
               aria-describedby="emailHelp"
               // value={username}
               onChange={user}
-              placeholder="atuny0"
             />
             <div id="emailHelp" className="form-text"></div>
           </div>
@@ -59,7 +58,6 @@ const Login = () => {
               id="exampleInputPassword1"
               // value={password}
               onChange={pass}
-              placeholder="9uQFF1Lh"
             />
           </div>
           <div className="mb-3 form-check">

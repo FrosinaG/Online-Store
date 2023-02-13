@@ -13,9 +13,11 @@ const SingleProducts = ({ article }) => {
       .get(`https://dummyjson.com/products/${id}`)
       .then((data) => {
         SetProduct(data.data);
+        console.log("locaton",location)
       })
       .catch(() => {
         console.log("exception");
+      
       });
   };
   useEffect(() => {

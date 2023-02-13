@@ -6,10 +6,10 @@ import { useSelector } from "react-redux";
 const Nav = () => {
   const { cartTotalQuantity } = useSelector((state) => state.cart);
   return (
-    <div className="nav-cont">
-      <ul className="nav justify-content-center">
-        <img src={logo} alt="logo" className="logo" />
-        <li className="nav-item">
+    <div className="nav-cont nav-mob">
+      <ul className="nav justify-content-center mob-ul">
+      <Link to ="/" ><img src={logo} alt="logo" className="logo " /></Link>
+        <li className="nav-item limob">
           <Link to="/" className="nav-link linknav" aria-current="page">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,17 +26,17 @@ const Nav = () => {
           </Link>
         </li>
 
-        <li className="nav-item">
+        <li className="nav-item limob">
           <Link to="shop" className="nav-link linknav">
             Shop
           </Link>
         </li>
-        <li className="nav-item">
+        <li className="nav-item limob">
           <Link to="contact" className="nav-link linknav">
             Contact
           </Link>
         </li>
-        <li className="nav-item">
+        <li className="nav-item limob">
           <Link to="login" className="nav-link linknav">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ const Nav = () => {
             Login
           </Link>
         </li>
-        <div className="nav-bag">
+        <div className="nav-bag limob">
           <Link to="cart" className="cartlink">
             <svg
               xmlns="http://www.w3.org/2000/svg"

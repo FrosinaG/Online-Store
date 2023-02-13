@@ -4,32 +4,6 @@
   box-sizing: border-box;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.allcard {
-  padding: 20px;
-  margin: 50px auto;
-  width: 90%;
-}
-.category {
-  font-size: 20px;
-  color: rgb(86, 84, 84);
-  font-variant-caps: all-petite-caps;
-  font-weight: 400;
-}
-.cardbox {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  width: 28%;
-  margin: 15px auto;
-  box-shadow: 0px 10px 10px rgb(0 0 0 / 50%);
-  font-size: 12px;
-}
-.cardbox:hover {
-  box-shadow: 0px 10px 10px rgba(50, 82, 179, 0.5);
-}
-.productsimg {
-  max-height: 120px;
-}
 .home-cont,
 .login-cont,
 .contact-cont,
@@ -41,41 +15,6 @@
   padding: 200px;
   margin: 0;
   text-align: center;
-}
-.price {
-  color: red;
-  font-size: 18px;
-}
-.stars {
-  color: yellow;
-}
-.nav-cont,
-.footer-con {
-  padding: 15px;
-  background-color: rgb(43, 43, 43);
-}
-.lista {
-  width: 100%;
-}
-li {
-  padding: 0 20px;
-}
-.linknav,
-.footer-con {
-  color: white;
-  font-size: 18px;
-}
-.footer-social-icon,
-.copy {
-  display: flex;
-  width: 15%;
-  margin: 0 auto;
-  padding: 0 22px;
-}
-
-.linknav:hover {
-  color: white;
-  background-color: rgb(86, 84, 84);
 }
 h1 {
   font-size: 70px;
@@ -91,20 +30,44 @@ h2 {
   color: rgb(86, 84, 84);
   text-shadow: none;
 }
+
+/* SingleProductcomponent */
+.productsimg {
+  max-height: 120px;
+}
+.price {
+  color: red;
+  font-size: 18px;
+}
+.stars {
+  color: yellow;
+}
+.category {
+  font-size: 20px;
+  color: rgb(86, 84, 84);
+  font-variant-caps: all-petite-caps;
+  font-weight: 400;
+}
+.singlebox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 80px;
+}
+.singT {
+  width: 100%;
+  min-height: 300px;
+}
+/* HomeComponent */
 .header {
   text-align: right;
   width: 60%;
   margin: 0 auto;
 }
-.social-link {
-  color: white;
-  margin: 10px;
+text {
+  text-align: left;
 }
-.loginfrom {
-  width: 50%;
-  font-size: 18px;
-  margin: 0 auto;
-}
+/* ShopCopomponet */
 .card-title {
   font-size: 25px;
   font-weight: 400;
@@ -118,38 +81,41 @@ form {
   margin: 0 auto;
 }
 
-.singlebox {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 80px;
-}
-text {
-  text-align: left;
-}
-
-.singT {
-  width: 100%;
-  min-height: 300px;
-}
-.part {
+.part1 {
   width: 30%;
   text-align: left;
   padding: 30px;
   font-size: 20px;
   margin: 5px;
 }
-
 .box {
   display: inline;
   margin: 50px 0;
 }
-
-.photo {
-  width: 20%;
-  padding: 5px;
-  max-height: 100px;
-  vertical-align: top;
+/* Navcomponent */
+.social-link {
+  color: white;
+  margin: 10px;
+}
+.lista {
+  width: 100%;
+}
+li {
+  padding: 0 20px;
+}
+.linknav,
+.footer-con {
+  color: white;
+  font-size: 18px;
+}
+.linknav:hover {
+  color: white;
+  background-color: rgb(86, 84, 84);
+}
+.nav-cont,
+.footer-con {
+  padding: 15px;
+  background-color: rgb(43, 43, 43);
 }
 .bag-qoantity {
   display: flex;
@@ -162,6 +128,15 @@ text {
   font-size: 12px;
   font-weight: 600;
 }
+/* FooterComponent */
+.footer-social-icon,
+.copy {
+  display: flex;
+  width: 15%;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+/* NotFoundcomponent */
 .NotFound {
   display: flex;
   flex-direction: column;
@@ -171,8 +146,24 @@ text {
   font-size: 30px;
   min-height: 500px;
 }
-
-/* cart */
+/* Cartcomponent */
+.cardbox {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 28%;
+  margin: 15px auto;
+  box-shadow: 0px 10px 10px rgb(0 0 0 / 50%);
+  font-size: 12px;
+}
+.cardbox:hover {
+  box-shadow: 0px 10px 10px rgba(50, 82, 179, 0.5);
+}
+.allcard {
+  padding: 20px;
+  margin: 50px auto;
+  width: 90%;
+}
 .cart-container {
   width: 95%;
   margin: 10px auto;
@@ -186,7 +177,6 @@ text {
   display: flex;
   justify-content: space-between;
   width: 100%;
-
   margin: 10px auto;
   text-align: center;
 }
@@ -251,7 +241,16 @@ text {
   margin: 5px;
   width: 100%;
 }
-
+.cart-empty {
+  width: 35%;
+  margin: 80px auto;
+  padding: 80px;
+  font-size: 25px;
+  text-align: center;
+}
+.allofCart {
+  box-shadow: 0px 10px 10px rgb(0 0 0 / 50%);
+}
 /* Shop */
 .loading {
   font-size: 30px;
@@ -265,11 +264,11 @@ text {
   margin: 50x;
   padding: 50px;
 }
-.Search{
+.Search {
   width: 50%;
   margin: 0 auto;
 }
-.search-in{
+.search-in {
   width: 100%;
   padding: 5px;
   border-radius: 20px;
@@ -277,18 +276,18 @@ text {
   font-size: 20px;
   box-shadow: 0px 10px 10px rgb(0 0 0 / 70%);
 }
+.photo {
+  width: 20%;
+  padding: 5px;
+  max-height: 100px;
+  vertical-align: top;
+}
 /* Login */
 .default-login {
   font-size: 10px;
 }
-/* *Cart */
-.cart-empty {
-  width: 35%;
-  margin: 80px auto;
-  padding: 80px;
-  font-size: 25px;
-  text-align: center;
-}
-.allofCart {
-  box-shadow: 0px 10px 10px rgb(0 0 0 / 50%);
+.loginfrom {
+  width: 50%;
+  font-size: 18px;
+  margin: 0 auto;
 }
