@@ -123,21 +123,25 @@
   .loginform {
     margin-top: 100px;
     padding: 20px;
+ 
   }
   .login-cont {
     width: 100%;
     padding: 50px 0;
     margin: 0;
+   
   }
   .forma {
     width: 100%;
     margin: 0 auto;
-    padding: 100px 5px;
+    padding: 100px 0px;
     align-items: center;
+
   }
   .mb-3 {
     width: 100%;
-    margin: 0 auto;
+    padding: 0;
+    margin: 10px auto;
   }
   /* Cartcomponent */
   .allofCart {
@@ -155,9 +159,13 @@
     padding: 0;
   }
   .remove-btn {
-    width: 20%;
+    width: 100%;
     margin: auto;
     padding: 20px 10px;
+  }
+  .removeb{
+    width: 100%;
+   
   }
   .logout-btn {
     align-items: center;
