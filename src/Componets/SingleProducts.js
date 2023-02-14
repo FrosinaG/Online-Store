@@ -1,10 +1,9 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Link,  useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const SingleProducts = ({ article }) => {
   let { id } = useParams();
- 
 
   const [product, SetProduct] = useState();
 
@@ -13,7 +12,6 @@ const SingleProducts = ({ article }) => {
       .get(`https://dummyjson.com/products/${id}`)
       .then((data) => {
         SetProduct(data.data);
-       
       })
       .catch(() => {
         console.log("exception");
@@ -28,8 +26,9 @@ const SingleProducts = ({ article }) => {
         <div className="text part">
           <p className="category">{product.category}</p>
           <h2>{product.title}</h2>
-          <p className="card-text">
-            {product.brand}
+          <p className="card-text">{product.brand}</p>
+          <p>
+            {" "}
             <b>Description :</b> {product.description}
           </p>
           <p>
