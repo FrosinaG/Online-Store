@@ -37,7 +37,7 @@ const Login = () => {
         <h2 className="grey">Welcome back! Please login to your account.</h2>
         <form onSubmit={apiCall} className="forma">
           <div className="mb-3">
-            <label className="form-label label1">Email address</label>
+            <label className="form-label label1">Username </label>
             <p className="default-login">Default user :atuny0</p>
             <input
               type="text"
