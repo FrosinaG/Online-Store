@@ -176,7 +176,7 @@ const Cart = () => {
                   <div className="remove-btn">
                     {" "}
                     <button
-                      className="btn btn-outline-secondary"
+                      className="btn btn-outline-secondary removeb"
                       onClick={() => HandleRemoveFromCart(cartItems)}
                     >
                       Remove
