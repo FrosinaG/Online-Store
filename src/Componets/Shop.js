@@ -10,14 +10,14 @@ const Shop = () => {
 
   const dispetch = useDispatch();
   const navigate = useNavigate();
-
+  const [setProducts] = useState();
   const [SearchProduct, setSerchProduct] = useState();
 
   useEffect(() => {
     axios
       .get("https://dummyjson.com/products")
       .then((response) => {
-        setSerchProduct(response.data);
+        setProducts(response.data);
       })
       .catch((error) => {
         console.error();
