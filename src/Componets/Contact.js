@@ -1,11 +1,11 @@
 import React from "react";
-
+import { Typography } from "@mui/material";
 export const Contact = () => {
   return (
     <div className="contact-cont">
       <div className="contact-mob-text">
-        <h1>CONTACT US</h1>
-        <h2>HAVE YOU SOME QUESTIONS ?</h2>
+        <Typography variant="h2">CONTACT US</Typography>
+        <Typography variant="h4">HAVE YOU SOME QUESTIONS ?</Typography>
         <h2 className="grey">How Can We Help You?</h2>
       </div>
       <div className="contactform">

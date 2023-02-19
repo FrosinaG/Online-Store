@@ -7,9 +7,10 @@ const initialState = {
 export const productsFetch = createAsyncThunk(
   "products/productFetch",
   async () => {
-    const response = await axios.get("https://dummyjson.com/products");
+    const response = await axios.get("http://localhost:5000/products");
     return response?.data;
   }
+
 );
 const productsSliece = createSlice({
   name: "products",

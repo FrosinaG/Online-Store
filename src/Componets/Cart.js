@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import {  Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import {
   addToCart,
@@ -8,6 +9,7 @@ import {
   removeFromCart,
   getTotals,
 } from "../Redux/cartSlice";
+
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -35,10 +37,11 @@ const Cart = () => {
   };
   return (
     <div className="cart-container">
-      <h2>Shopping Cart</h2>
+      <Typography variant="h3" >Shopping Cart</Typography>
       {cart.cartItems.length === 0 ? (
         <div className="cart-empty">
-          <p>Your Cart Is Empty</p>
+          <Typography variant="body1">Your Cart Is Empty</Typography>
+
           <div className="start-shopping">
             <Link to="/shop" className="start-shopping">
               {" "}
@@ -62,25 +65,25 @@ const Cart = () => {
       ) : (
         <>
           <div className="titles">
-            <div className="cart-items">
+                   <div className="cart-items">
               {cart.cartItems?.map((cartItems) => (
                 <div className="allofCart" key={cartItems.id}>
                   <div className="cart-item">
                     <div className="cart-product">
                       <div className="cart-thumbnail part1">
-                        <p className="category">{cartItems.category}</p>
+                        
                         <img
-                          src={cartItems.thumbnail}
-                          alt={cartItems.title}
+                          src={cartItems.images}
+                          alt={cartItems.name}
                           className="img-thum"
                         />
                       </div>
                       <div className="text part1">
                         <h3 className="h-cart">Product</h3>
 
-                        <h2>{cartItems.title}</h2>
+                        <h2>{cartItems.name}</h2>
                         <p className="card-text">
-                          {cartItems.brand}
+                       
                           <b>Description :</b> {cartItems.description}
                         </p>
                         <p>

@@ -32,13 +32,23 @@ h2 {
 }
 
 /* SingleProductcomponent */
-.btnSingleProduct{
-display: flex;
-justify-content: space-between;
-margin: 10px;
+.btnSingleProduct {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 5px 25px;
+  width: 40%;
+
+  margin: 10px auto;
+}
+.link-btn {
+  text-decoration: none;
+  color: #ffffff;
 }
 .productsimg {
-  max-height: 120px;
+  max-height: 100px;
+  width: 100%;
+  margin: 0 auto;
 }
 .price {
   color: red;
@@ -73,6 +83,11 @@ text {
   text-align: left;
 }
 /* ShopCopomponet */
+.hedershop {
+  width: 60%;
+  margin: 23px auto;
+  text-align: center;
+}
 .card-title {
   font-size: 25px;
   font-weight: 400;
@@ -153,13 +168,13 @@ li {
 }
 /* Cartcomponent */
 .cardbox {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   width: 28%;
   margin: 15px auto;
-  box-shadow: 0px 10px 10px rgb(0 0 0 / 50%);
   font-size: 12px;
+  max-height: 400px;
 }
 .cardbox:hover {
   box-shadow: 0px 10px 10px rgba(50, 82, 179, 0.5);
@@ -238,8 +253,12 @@ li {
 .start-shopping,
 .continue-shopping,
 .card-link {
-  color: gray;
+  color:red;
   text-align: none;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+
 }
 .addto {
   align-items: center;
@@ -281,11 +300,30 @@ li {
   font-size: 20px;
   box-shadow: 0px 10px 10px rgb(0 0 0 / 70%);
 }
+.img-price {
+  display: flex;
+}
+.cartIn {
+  min-height: 300px;
+}
+.price-shop {
+  padding: 30px;
+  text-align: center;
+  width: 50%;
+  color: red;
+}
+.imgProduct {
+  width: 50%;
+}
 .photo {
   width: 20%;
   padding: 5px;
   max-height: 100px;
   vertical-align: top;
+}
+.btnAdd {
+  margin: 0 auto;
+  width: 80%;
 }
 /* Login */
 .default-login {

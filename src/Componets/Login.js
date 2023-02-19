@@ -1,6 +1,9 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Typography } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
+import { Button } from "@mui/material";
 
 const Login = () => {
   const [username, setUsername] = useState();
@@ -17,7 +20,7 @@ const Login = () => {
   const apiCall = (e) => {
     e.preventDefault();
     axios
-      .post("https://dummyjson.com/auth/login ", {
+      .post("http://localhost:5000/users/login ", {
         username: username,
         password: password,
       })
@@ -33,16 +36,16 @@ const Login = () => {
   return (
     <div className="login-cont">
       <div className="loginfrom">
-        <h1>Login</h1>
+        <Typography variant="h2">Login</Typography>
         <h2 className="grey">Welcome back! Please login to your account.</h2>
         <form onSubmit={apiCall} className="forma">
           <div className="mb-3">
-            <label className="form-label label1">Email address</label>
-            <p className="default-login">Default user :atuny0</p>
+            <label className="form-label label1">Username</label>
+            <Typography variant="body2">Default user :</Typography>
+
             <input
               type="text"
               className="form-control"
-              id="exampleInputEmail1"
               aria-describedby="emailHelp"
               // value={username}
               onChange={user}
@@ -51,11 +54,11 @@ const Login = () => {
           </div>
           <div className="mb-3">
             <label className="form-label label1">Password</label>
-            <p className="default-login">Default password:9uQFF1Lh </p>
+            <Typography variant="body2">Default password:</Typography>
+
             <input
               type="password"
               className="form-control"
-              id="exampleInputPassword1"
               // value={password}
               onChange={pass}
             />
@@ -68,9 +71,9 @@ const Login = () => {
             />
             <label className="form-check-label label1">Check me out</label>
           </div>
-          <button type="submit" className="btn btn-primary">
+          <Button variant="contained" startIcon={<SendIcon />}>
             Submit
-          </button>
+          </Button>
         </form>{" "}
       </div>
     </div>

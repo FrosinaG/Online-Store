@@ -18,13 +18,13 @@ const cartSlice = createSlice({
       );
       if (itemIndex >= 0) {
         state.cartItems[itemIndex].cartQuantity += 1;
-        toast.info(`${state.cartItems[itemIndex].title}`, {
+        toast.info(`${state.cartItems[itemIndex].name}`, {
           positon: "bottom-left",
         });
       } else {
         const tempProduct = { ...action.payload, cartQuantity: 1 };
         state.cartItems.push(tempProduct);
-        toast.success(`${action.payload.title} added to cart`, {
+        toast.success(`${action.payload.name} added to cart`, {
           positon: "bottom-left",
         });
       }
@@ -36,6 +36,12 @@ const cartSlice = createSlice({
       );
       state.cartItems = nextCartItems;
     },
+    SearchProduct(state, action) {
+      const nextCartItems = state.cartItems.filter((cartItems) =>
+        cartItems.name.toLowerCase().includes(cartItems)
+      );
+      state.cartItems = nextCartItems;
+    },
     decreaseCart(state, action) {
       const itemIndex = state.cartItems.findIndex(
         (cartItems) => cartItems.id === action.payload.id
@@ -43,7 +49,7 @@ const cartSlice = createSlice({
       if (state.cartItems[itemIndex].cartQuantity > 1) {
         state.cartItems[itemIndex].cartQuantity -= 1;
 
-        toast.info(`Decreased${action.payload.title} cart quantity`, {
+        toast.info(`Decreased${action.payload.name} cart quantity`, {
           positon: "bottom-left",
         });
       } else if (state.cartItems[itemIndex].cartQuantity === 1) {
@@ -52,7 +58,7 @@ const cartSlice = createSlice({
         );
         state.cartItems = nextCartItems;
 
-        toast.error(`${action.payload.title} remove from cart`, {
+        toast.error(`${action.payload.name} remove from cart`, {
           positon: "bottom-left",
         });
       }
@@ -81,6 +87,12 @@ const cartSlice = createSlice({
     },
   },
 });
-export const { addToCart, removeFromCart, decreaseCart, clearCart, getTotals } =
-  cartSlice.actions;
+export const {
+  addToCart,
+  removeFromCart,
+  decreaseCart,
+  clearCart,
+  getTotals,
+  SearchProduct,
+} = cartSlice.actions;
 export default cartSlice.reducer;
